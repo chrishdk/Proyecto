@@ -2,3 +2,7 @@
 body {
   padding-top: 56px;
 }
+
+.rem{
+  font-size: 2rem ;
+}
