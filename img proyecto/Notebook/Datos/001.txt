@@ -1,0 +1,48 @@
+
+Características
+
+Procesador
+Intel Celeron N4020 (2 núcleos / 2 hilos / 1100 MHz - 2800 MHz)
+
+RAM
+4 GB DDR4 (2400 MHz)
+
+Pantalla
+LED 14.0" (1366x768) / 60 Hz
+
+Batería
+30000 mWh
+
+Almacenamiento
+HDD 1TB (5400rpm)
+Tarjetas de video
+Intel UHD Graphics 600 (Integrada)
+
+Puertos
+1x HDMI 1.4
+2x SuperSpeed USB 5Gbps Type-A (USB 3.0 / USB 3.1 Gen 1 / USB 3.2 Gen 1)
+1x USB 2.0
+
+Secundarias
+Peso
+1600 g.
+
+Dimensiones
+327 x 241 x 20 mm
+Sistema Operativo
+Microsoft Windows 10 Home
+Unidad óptica
+No
+
+Otros
+WiFi
+Genérica [Wi-Fi 5 (802.11ac)]
+Adaptador de energía
+45W.
+Lector de tarjetas
+4-en-1
+¿Lector de huellas digitales?
+No
+
+      oferta   /normal
+(bip) $329.990  $345.990
