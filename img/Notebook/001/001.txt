@@ -1,0 +1,42 @@
+HP Omen 15-EN0002LA [10G91LA]
+
+Características
+Procesador
+AMD Ryzen 7 4800H (8 núcleos / 16 hilos / 2900 MHz - 4200 MHz)
+RAM
+16 GB DDR4 (3200 MHz)
+Pantalla
+LED 15.6" (1920x1080) / 60 Hz
+Batería
+6 celdas (70900 mWh)
+Almacenamiento
+SSD 512GB
+Tarjetas de video
+NVIDIA GeForce RTX 2060 (6 GB)
+AMD Radeon RX Vega 7 (Integrada)
+Puertos
+1x HDMI 2.0
+1x Mini DisplayPort
+1x RJ45 (10 / 100 / 1000 Mbps)
+3x SuperSpeed USB 5Gbps Type-A (USB 3.0 / USB 3.1 Gen 1 / USB 3.2 Gen 1)
+Secundarias
+Peso
+2370 g.
+Dimensiones
+358 x 240 x 23 mm
+Sistema Operativo
+Microsoft Windows 10 Home
+Unidad óptica
+No
+Otros
+WiFi
+Realtek [Wi-Fi 5 (802.11ac)]
+Adaptador de energía
+200W.
+Lector de tarjetas
+Lector de tarjetas SD
+¿Lector de huellas digitales?
+No
+
+
+$1099990 $1249990
