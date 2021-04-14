@@ -34,3 +34,4 @@ Lector de tarjetas
 MicroSD
 ¿Lector de huellas digitales?
 No
+
