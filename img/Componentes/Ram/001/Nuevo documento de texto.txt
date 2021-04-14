@@ -1,0 +1,26 @@
+G.Skill Trident Z RGB F4-2400C15S-8GTZR (1 x 8GB | DIMM DDR4-2400)
+
+Características
+Capacidad
+1 x 8GB
+Tipo
+DDR4
+Frecuencia
+2400 MHz
+Formato
+DIMM
+Especificaciones secundarias
+Voltaje
+1.20 V
+Latencia Cl (CAS)
+15
+Latencia Trcd
+Desconocida
+Latencia Trp
+Desconocida
+Latencia Tras
+Desconocida
+Soporte ECC
+No
+Soporte full buffered
+No

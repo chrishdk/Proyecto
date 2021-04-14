@@ -1,0 +1,24 @@
+Intel Core i7-11700F [BX8070811700F]
+
+Características
+Frecuencia
+2500 MHz
+Frecuencia turbo máxima
+4900 MHz
+Núcleos / hilos
+8 núcleos / 16 hilos
+Caché
+8 x 256KB L2 / 16MB L3
+Socket
+LGA 1200
+Especificaciones secundarias
+Núcleo
+Intel Rocket Lake S (Rocket Lake)
+Proceso de manufactura
+14 nm
+TDP
+65 W
+Cooler
+Cooler stock Intel
+Gráficos integrados
+No posee
