@@ -14,3 +14,9 @@ body {
 .font-weight-bold{
   color: azure;
 }
+.imgCondiciones{
+  width: 600px;
+  padding-top: 5%;
+  padding-left: 10%;
+}
+
