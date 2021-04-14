@@ -1,0 +1,36 @@
+Características
+ASUS Chromebook C423NA-WB04
+
+Procesador
+Intel Celeron N3350 (2 núcleos / 2 hilos / 1100 MHz - 2400 MHz)
+RAM
+4 GB LPDDR4 (2400 MHz)
+Pantalla
+LED 14.0" (1366x768) / 60 Hz
+Batería
+3 celdas (38000 mWh)
+Almacenamiento
+eMMC 64GB
+Tarjetas de video
+Intel HD Graphics 500 (Integrada)
+Puertos
+2x SuperSpeed USB 5Gbps Type-A (USB 3.0 / USB 3.1 Gen 1 / USB 3.2 Gen 1)
+2x SuperSpeed USB 5Gbps Type-C (USB 3.0 / USB 3.1 Gen 1 / USB 3.2 Gen 1) (con señal HDMI / DisplayPort)
+Secundarias
+Peso
+1230 g.
+Dimensiones
+323 x 229 x 16 mm
+Sistema Operativo
+Google Chrome OS
+Unidad óptica
+No
+Otros
+WiFi
+Genérica [Wi-Fi 5 (802.11ac)]
+Adaptador de energía
+45W.
+Lector de tarjetas
+MicroSD
+¿Lector de huellas digitales?
+No
