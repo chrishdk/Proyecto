@@ -1,0 +1,35 @@
+MSI GeForce GTX 1660 GAMING X 6G
+
+Características
+Fabricante
+MSI
+GPU
+NVIDIA GeForce GTX 1660
+Memoria
+6 GB GDDR5 (192 bit)
+Bus
+PCI Express 3.0 x16
+Frecuencias core (base / boost)
+1530 / 1785 MHz
+Frecuencia memorias
+2000 MHz
+Especificaciones secundarias
+Núcleo
+NVIDIA Turing TU116
+Perfil
+Normal
+Refrigeración
+Ventilador
+Slots
+Dual slot
+Largo
+247 mm.
+Iluminación
+Desconocido
+¿Backplate?
+No
+Conectores de poder
+1x 8 pines
+Puertos de video
+3x DisplayPort
+1x HDMI
