@@ -18,4 +18,11 @@ body {
   padding-top: 5%;
   padding-left: 10%;
 }
+.list-group{
+  width:70%;
 
+
+}
+.list-group-item{
+  padding: 5px;
+}
