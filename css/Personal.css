@@ -21,8 +21,13 @@ body {
 .list-group{
   width:70%;
 
-
 }
 .list-group-item{
   padding: 5px;
+}
+.quienessomos{
+  margin-top: 80px;
+  margin-bottom: 500px;
+  font-family: cursive;
+
 }
