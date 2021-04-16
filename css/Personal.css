@@ -31,3 +31,28 @@ body {
   font-family: cursive;
 
 }
+.cart-producto{
+  margin-left: 10%;
+
+}
+.leyenda{
+  margin-top: 4%;
+  margin-left: 3%;
+  margin-right: 15%;
+  border:2px solid black;
+  margin-bottom: 3%;
+}
+.precio{
+  margin-left: 5%;
+  border:2px solid black;
+  width: 300px;
+}
+
+.boton-compra{
+  margin-top: 30px;
+  margin-bottom: 15%;
+}
+
+.ficha_precio_efectivo{
+  border-top: 1px solid #999;
+}
