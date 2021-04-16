@@ -2,57 +2,53 @@ body {
   padding-top: 56px;
 }
 
-.boton{
- padding-top: 10px ;
-
+.boton {
+  padding-top: 10px;
 }
-.carousel-item{
+.carousel-item {
   width: 800pxpx;
   padding: 15px;
 }
-.font-weight-bold{
+.font-weight-bold {
   color: azure;
 }
-.imgCondiciones{
+.imgCondiciones {
   width: 600px;
   padding-top: 5%;
   padding-left: 10%;
 }
-.list-group{
-  width:70%;
-
+.list-group {
+  width: 70%;
 }
-.list-group-item{
+.list-group-item {
   padding: 5px;
 }
-.quienessomos{
+.quienessomos {
   margin-top: 80px;
   margin-bottom: 500px;
   font-family: cursive;
-
 }
-.cart-producto{
+.cart-producto {
   margin-left: 10%;
-
 }
-.leyenda{
+.leyenda {
   margin-top: 4%;
   margin-left: 3%;
   margin-right: 15%;
-  border:2px solid black;
+  border: 2px solid black;
   margin-bottom: 3%;
 }
-.precio{
+.precio {
   margin-left: 5%;
-  border:2px solid black;
+  border: 2px solid black;
   width: 300px;
 }
 
-.boton-compra{
+.boton-compra {
   margin-top: 30px;
   margin-bottom: 15%;
 }
 
-.ficha_precio_efectivo{
+.ficha_precio_efectivo {
   border-top: 1px solid #999;
 }
