@@ -52,3 +52,11 @@ body {
 .ficha_precio_efectivo {
   border-top: 1px solid #999;
 }
+
+
+.carousel-indicators .active{
+  background-color: black;
+
+}
+
+
