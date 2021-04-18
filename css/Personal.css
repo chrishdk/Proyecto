@@ -57,3 +57,10 @@ body {
 .logo-pag{
   width: 40px;
 }
+
+.list-unstyled li a{
+  color: white;
+}
+
+
+
