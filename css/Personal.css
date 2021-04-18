@@ -62,8 +62,9 @@ body {
   color: white;
 }
 
-.texto-tabla li a{
-  color: black;
+.parrafo{
+  text-align: justify;
+  color:black;
 }
 
 
