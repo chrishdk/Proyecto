@@ -16,6 +16,22 @@
 
     <!-- Custom styles for this template -->
     <link href="../css/Personal.css" rel="stylesheet" />
+
+    <!-- incorporamos las jquey y validadores -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"
+    ></script>
+
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/additional-methods.min.js"
+    ></script>
   </head>
 
   <body>
@@ -85,13 +101,13 @@
             </li>
             <li class="nav-item">
               <a href="../menu/Carrito.html">
-              <img
-                class="logo-pag"
-                src="../img/Pag/Carrito/carro_mini.png"
-                alt="Logo"
-                style="position: absolute; right: 250px"
-              />
-            </a>
+                <img
+                  class="logo-pag"
+                  src="../img/Pag/Carrito/carro_mini.png"
+                  alt="Logo"
+                  style="position: absolute; right: 250px"
+                />
+              </a>
             </li>
           </ul>
         </div>
@@ -113,6 +129,7 @@
             <form class="form-horizontal" method="post">
               <fieldset>
                 <legend class="text-center header"></legend>
+
                 <div class="form-group">
                   <span class="col-md-1 col-md-offset-2 text-center"
                     ><i class="fa fa-user bigicon"></i
@@ -158,50 +175,64 @@
                   </div>
                 </div>
 
+                <!--------Ingreso Contrasenna------->
                 <div class="form-group">
                   <span class="col-md-1 col-md-offset-2 text-center"
                     ><i class="fa fa-user bigicon"></i
                   ></span>
                   <div class="col-md-8">
+                    <label for="id_txtContrasena">Contraseña</label>
                     <input
-                      id="lname"
-                      name="name"
+                      id="id_txtContrasena"
+                      name="txtContrasena"
                       type="password"
                       placeholder="Contraseña"
                       class="form-control"
+                      required=""
                     />
                   </div>
                 </div>
+                <!--------Fin Contrasenna------->
 
+                <!--------Ingreso Repetir Contrasenna------->
                 <div class="form-group">
                   <span class="col-md-1 col-md-offset-2 text-center"
                     ><i class="fa fa-user bigicon"></i
                   ></span>
                   <div class="col-md-8">
+                    <label for="id_txtRepetirConstrasena"
+                      >Repetir Contraseña</label
+                    >
                     <input
-                      id="lname"
-                      name="name"
+                      id="id_txtRepetirContrasena"
+                      name="txtRepetirContrasena"
                       type="password"
                       placeholder="Repita contraseña"
                       class="form-control"
+                      required=""
                     />
                   </div>
                 </div>
+                <!--------Fin Repetir Contrasenna------->
 
+                <!--------Ingreso de Email------->
                 <div class="form-group">
                   <span class="col-md-1 col-md-offset-2 text-center"
                     ><i class="fa fa-envelope-o bigicon"></i
                   ></span>
                   <div class="col-md-8">
+                    <label for="id_txtEmail">Email</label>
                     <input
-                      id="email"
-                      name="email"
-                      type="text"
-                      placeholder="Email"
+                      id="id_txtEmail"
+                      aria-describedby="emailHelp"
+                      name="emailHelp"
+                      type="email"
+                      placeholder="Ingrese su email aqui"
                       class="form-control"
                     />
                   </div>
                 </div>
+                <!--------Fin Ingreso de Email------->
 
                 <div class="form-group">
                   <span class="col-md-1 col-md-offset-2 text-center"
@@ -217,14 +248,20 @@
                     />
                   </div>
                 </div>
-
-                <div class="boton">
-                  <div class="col-md-12 text-center">
-                    <button class="btn btn-primary" type="submit" disabled>
-                      Registrarse
-                    </button>
-                  </div>
+                <div class="form-group">
+                  <button
+                    class="btn btn-info"
+                    type="button"
+                    name="showpassword"
+                    id="showpassword"
+                    value="Ver Password"
+                  >
+                    Ver Password
+                  </button>
                 </div>
+                <button class="btn btn-primary" type="submit">
+                  Registrarse
+                </button>
               </fieldset>
             </form>
           </div>
@@ -305,5 +342,8 @@
     ></script>
     <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <!-- incorporamos nuestro javascript con las reglas que deseamos aplicar -->
+    <script src="../js/validador.js" type="text/javascript"></script>
+    <script src="../js/verPassword.js" type="text/javascript"></script>
   </body>
 </html>
