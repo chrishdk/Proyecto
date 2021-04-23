@@ -3,37 +3,34 @@
 $("#formulariol").validate(
   {
     rules: {
-      txtEmail: {
+      "txtEmail": {
         required: true,
-
         email: true,
       },
 
-      txtContrasena: {
+      "txtContrasena": {
         required: true,
-
         minlength: 5,
       },
 
-      txtRepetirContrasena: {
+      "txtRepetirContrasena": {
         required: true,
-
         equalTo: "#id_txtContrasena",
       },
     },
     //--> Fin de reglas
 
     messages: {
-      txtEmail: {
+      "txtEmail": {
         required: "Ingrese email",
         email: "No cumple formato",
       },
-      txtContrasena: {
+      "txtContrasena": {
         required: "Ingrese la contraseña",
         minlength: "Minimo 5 caracteres",
       },
 
-      txtRepetirContrasena: {
+      "txtRepetirContrasena": {
         required: "Repita la contraseña",
         equalTo: "Debe ser igual al campo contraseña",
       },
