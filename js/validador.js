@@ -35,7 +35,6 @@ $("#formulariol").validate(
 
       txtRepetirContrasena: {
         required: "Repita la contraseña",
-
         equalTo: "Debe ser igual al campo contraseña",
       },
     },
