@@ -1,10 +1,11 @@
 // objeto.metodo(json)
- 
+jQuery(document).ready(function () {
 $("#formulario1").validate({
   rules: {
-      "txtEmail": {
-          required: true,
-          email: true
+
+      "id_txtEmail": {
+        required: true,
+        email: true
       },
       "txtContrasena": {
           required: true,
@@ -16,9 +17,9 @@ $("#formulario1").validate({
       }
   }, // --> Fin de reglas
   messages: {
-      "txtEmail": {
-          required: 'Ingrese email',
-          email: 'No cumple formato'
+      "id_txtEmail": {
+        required: 'Ingrese email',
+        email: 'No cumple formato'
       },
       "txtContrasena": {
           required: 'Ingrese la contraseña',
@@ -30,4 +31,5 @@ $("#formulario1").validate({
       }
   } //-->Fin de mensajes
 
+});
 });

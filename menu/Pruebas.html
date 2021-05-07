@@ -1,267 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Proyecto Semestral</title>
-
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Custom styles for this template -->
-    <link href="../css/Personal.css" rel="stylesheet" />
-
-    <!-- incorporamos las jquey y validadores -->
-
+    <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <script
-      language="javascript"
-      type="text/javascript"
-      src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"
-    ></script>
 
-    <script
-      language="javascript"
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/additional-methods.min.js"
-    ></script>
-  </head>
-
-  <body>
-    <!-- Menu PC / Desplegable celular  -->
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <!--head-->
-        <a href="../index.html">
-          <img
-            class="logo-pag"
-            src="../img/Pag/Cosas/logo-pagina.png"
-            alt="Logo"
+<div class="container">
+  <div class="row">
+    <div class="col-md-6" style="padding-top: 30px">
+      <!-- FORM -->
+      <form id="contact-form">
+        <div class="form-group">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control required"
+            placeholder="Name"
           />
-        </a>
-        <b class="texto-footer">PROYECTO</b>
-        <!--head-->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#Menudesplegablecelular"
-          aria-controls="Menudesplegablecelular"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="Menudesplegablecelular">
-          <ul class="navbar-nav me-auto mb-5 mb-lg-0">
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="../index.html"
-                >Inicio <span class="sr-only"></span
-              ></a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="Hardware.html">Hardware</a>
-            </li>
-
-            <!--<li class="nav-item">
-              <a class="nav-link" href="../sub/Software.html">Sofware</a>
-            </li>-->
-
-            <li class="nav-item">
-              <a class="nav-link" href="Notebooks.html">Notebook</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="Contacto.html">Contacto</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="AcercaDe.html">Acerca De</a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="btn btn-outline-light my-2 my-sm-0"
-                href="InicioSesion.html"
-                style="position: absolute; right: 120px"
-                >Inicia Sesion</a
-              >
-            </li>
-            <li class="nav-item">
-              <a href="../menu/Carrito.html">
-                <img
-                  class="logo-pag"
-                  src="../img/Pag/Carrito/carro_mini.png"
-                  alt="Logo"
-                  style="position: absolute; right: 250px"
-                />
-              </a>
-            </li>
-          </ul>
         </div>
-      </div>
-    </nav>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3">
-          <h1 class="my-4">Registrarse</h1>
+        <div class="form-group">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control required"
+            placeholder="Email"
+          />
         </div>
-      </div>
+
+        <div class="form-group">
+          <label>
+            <input type="radio" name="fruit" class="required" /> Kiwi
+          </label>
+          <label>
+            <input type="radio" name="fruit" class="required" /> Mango
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" name="instrument" class="required" /> Guitar
+          </label>
+          <label>
+            <input type="checkbox" name="instrument" class="required" /> Drums
+          </label>
+        </div>
+        <div class="form-group">
+          <select name="age" class="required" name="cmbEdades">
+            <option value="">-- Seleccionar --</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <input
+            type="text"
+            name="subjet"
+            id="subjet"
+            class="form-control"
+            placeholder="Subject"
+          />
+        </div>
+        <div class="form-group">
+          <textarea
+            name="message"
+            id="message"
+            class="form-control required"
+            placeholder="Write a message"
+            rows="7"
+          ></textarea>
+        </div>
+        <button id="submit-form">Send message</button>
+      </form>
+      <!-- END FORM -->
     </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="well well-sm">
+  </div>
+</div>
 
 
-            <!-----Inicio from-->
-            <form name="formulariol" class="form-horizontal" method="POST">  
-
-                <!--------Ingreso Contrasenna------->
-                <div class="form-group">
-                    <label for="id_txtContrasena">Contraseña</label>
-                    <input
-                      id="id_txtContrasena"
-                      name="txtContrasena"
-                      type="password"
-                      placeholder="Contraseña"
-                      class="form-control"
-                      required=""
-                    />
-                  </div>
-                </div>
-                <!--------Fin Contrasenna------->
-
-                <!--------Ingreso Repetir Contrasenna------->
-                <div class="form-group">
-                  <span class="col-md-1 col-md-offset-2 text-center"
-                    ><i class="fa fa-user bigicon"></i>
-                </span>
-
-                  <div class="col-md-8">
-                    <label for="id_txtRepetirConstrasena"
-                      >Repetir Contraseña</label>
-                    <input
-                      id="id_txtRepetirContrasena"
-                      name="txtRepetirContrasena"
-                      type="password"
-                      placeholder="Repita contraseña"
-                      class="form-control"
-                      required=""/>
-                  </div>
-                </div>
-                <!--------Fin Repetir Contrasenna------->
-
-                <div class="from-check">
-                  <button
-                    class="btn btn-info"
-                    type="button"
-                    name="showpassword"
-                    id="showpassword"
-                    value="Ver Password"
-                  >
-                    Ver Password
-                  </button>
-                </div>
-                <button class="btn btn-primary" type="submit">
-                  Registrarse
-                </button>
-
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="page-footer font-small bg-dark pt-4">
-      <!-- Footer Links -->
-      <div class="container-fluid text-center text-md-left">
-        <!-- Grid row -->
-        <div class="row">
-          <!-- Grid column -->
-          <div class="col-md-6 mt-md-0 mt-3">
-            <!-- Content -->
-            <h5 class="texto-footer">UBICACION</h5>
-            <p class="texto-footer">
-              Calle Siempre Viva 1234, Las Condes, Region Metropolitana
-            </p>
-          </div>
-          <!-- Grid column -->
-
-          <hr class="clearfix w-100 d-md-none pb-3" />
-
-          <!-- Grid column -->
-          <div class="col-md-3 mb-md-0 mb-3">
-            <!-- Links -->
-            <h5 class="text-uppercase texto-footer">Servicios</h5>
-
-            <ul class="list-unstyled">
-              <li>
-                <a href="TerminoCondiciones.html">Terminos y condiciones</a>
-              </li>
-              <li>
-                <a href="PoliticaPrivacidad.html">Politicas de Privacidad</a>
-              </li>
-            </ul>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-3 mb-md-0 mb-3">
-            <!-- Links -->
-            <h5 class="text-uppercase texto-footer">Redes Sociales</h5>
-
-            <ul class="list-unstyled">
-              <li>
-                <a href="https://www.facebook.com/">Facebook</a>
-              </li>
-              <li>
-                <a href="https://twitter.com/">Twitter</a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/">Instagram</a>
-              </li>
-              <li>
-                <a href="https://www.youtube.com/">Youtube</a>
-              </li>
-            </ul>
-          </div>
-          <!-- Grid column -->
-        </div>
-        <!-- Grid row -->
-      </div>
-      <!-- Copyright -->
-      <div class="footer-copyright text-center py-3 texto-footer">
-        © 2021 Copyright: Grupo 4
-      </div>
-      <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
-
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <!-- incorporamos nuestro javascript con las reglas que deseamos aplicar -->
-    <script src="../js/validador.js" type="text/javascript"></script>
-    <script src="../js/verPassword.js" type="text/javascript"></script>
-  </body>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/from_validacion.js"></script>
+<script type="text/javascript" src="../js/messages_es.js"></script>
+</body>
 </html>
