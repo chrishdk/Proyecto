@@ -2,6 +2,14 @@
 
 $("#formulario1").validate({
     rules: {
+        "txtnombre":{
+            required: true,
+            minlength: 2
+        },
+        "txtnombreusuario":{
+            required: true,
+            minlength: 4
+        },
         "txtEmail": {
             required: true,
             email: true
@@ -16,6 +24,14 @@ $("#formulario1").validate({
         }
     }, // --> Fin de reglas
     messages: {
+        "txtnombre":{
+            required: 'Ingrese nombre',
+            minlength:'No cumple formato' 
+        },
+        "txtnombreusuario":{
+            required: 'Debe tener un nombre de usuario',
+            minlength: 'Debe tener minimo 4 carcteres'
+        },
         "txtEmail": {
             required: 'Ingrese email',
             email: 'No cumple formato'
