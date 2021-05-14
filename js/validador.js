@@ -46,4 +46,27 @@ $("#formulario1").validate({
         }
     } //-->Fin de mensajes
 
+
+    
+});
+$("#iniciosesion").validate({
+    rules: {
+        "txtusuario":{
+            required: true
+        },
+        "txtcontrasena":{
+            required: true
+        }
+    }, 
+    messages: {
+        "txtusuario":{
+            required: 'Ingrese nombre de usuario o correo' 
+        },
+        "txtcontrasena":{
+            required: 'Falta contraseña'
+        }
+    } //-->Fin de mensajes
+
+
+    
 });

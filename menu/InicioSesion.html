@@ -16,6 +16,19 @@
 
     <!-- Custom styles for this template -->
     <link href="../css/Personal.css" rel="stylesheet" />
+
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"
+    ></script>
   </head>
 
   <body>
@@ -92,46 +105,44 @@
       <div class="row">
         <div class="col-md-12">
           <div class="well well-sm">
-            <form class="form-horizontal" method="post">
-              <legend class="text-center header"></legend>
+            <form id="iniciosesion" method="POST">
+              <fieldset>
+                <legend class="text-center header"></legend>
 
-              <div class="form-group">
-                <span class="col-md-1 col-md-offset-2 text-center"
-                  ><i class="fa fa-user bigicon"></i
-                ></span>
-                <div class="col-md-8">
-                  <input
-                    id="lname"
-                    name="name"
-                    type="text"
-                    placeholder="Nombre de usuario o Email"
-                    class="form-control"
-                  />
+                <div class="form-group">
+                  <span class="col-md-1 col-md-offset-2 text-center"></span>
+                  <div class="col-md-8">
+                    <input
+                      id="id_user"
+                      name="txtusuario"
+                      type="text"
+                      placeholder="Nombre de usuario o Email"
+                      class="form-control"
+                    />
+                  </div>
                 </div>
-              </div>
 
-              <div class="form-group">
-                <span class="col-md-1 col-md-offset-2 text-center"
-                  ><i class="fa fa-user bigicon"></i
-                ></span>
-                <div class="col-md-8">
-                  <input
-                    id="lname"
-                    name="name"
-                    type="password"
-                    placeholder="Contraseña"
-                    class="form-control"
-                  />
+                <div class="form-group">
+                  <span class="col-md-1 col-md-offset-2 text-center"></span>
+                  <div class="col-md-8">
+                    <input
+                      id="id_txtclave"
+                      name="txtcontrasena"
+                      type="password"
+                      placeholder="Contraseña"
+                      class="form-control"
+                    />
+                  </div>
                 </div>
-              </div>
 
-              <div class="boton">
-                <div class="col-md-12 text-center">
-                  <button class="btn btn-primary" type="submit" disabled>
-                    Iniciar Sesion
-                  </button>
+                <div class="from-check">
+                  <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-primary">
+                      Iniciar Sesion
+                    </button>
+                  </div>
                 </div>
-              </div>
+              </fieldset>
 
               <div class="form-group">
                 <div class="col-md-12 text-center"></div>
@@ -144,12 +155,16 @@
                   <a class="underlineHover" href="#">¿Olvido su contraseña?</a>
                 </div>
               </div>
-              
             </form>
           </div>
         </div>
       </div>
     </div>
+<!-- separador -->
+    <div class="separadorfooter">
+      <div class="row"></div>
+    </div>
+<!-- separador -->
 
     <!-- Footer -->
     <footer class="page-footer font-small bg-dark pt-4">
@@ -217,12 +232,9 @@
     </footer>
     <!-- Footer -->
 
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
+
+
+    <script src="../js/validador.js" type="text/javascript"></script>
+    <script src="../js/verPassword.js" type="text/javascript"></script>
   </body>
 </html>
