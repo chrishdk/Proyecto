@@ -16,6 +16,17 @@
 
     <!-- Custom styles for this template -->
     <link href="../css/Personal.css" rel="stylesheet" />
+
+    <!-- incorporamos las jquey y validadores -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" 
+        rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript"
+        src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
+        
+
+    
   </head>
 
   <body>
@@ -85,13 +96,13 @@
             </li>
             <li class="nav-item">
               <a href="../menu/Carrito.html">
-              <img
-                class="logo-pag"
-                src="../img/Pag/Carrito/carro_mini.png"
-                alt="Logo"
-                style="position: absolute; right: 250px"
-              />
-            </a>
+                <img
+                  class="logo-pag"
+                  src="../img/Pag/Carrito/carro_mini.png"
+                  alt="Logo"
+                  style="position: absolute; right: 250px"
+                />
+              </a>
             </li>
           </ul>
         </div>
@@ -110,31 +121,36 @@
       <div class="row">
         <div class="col-md-12">
           <div class="well well-sm">
-            <form class="form-horizontal" method="post">
+            <!-----Inicio from-->
+            <form id="formulario1"  method="POST" >
               <fieldset>
                 <legend class="text-center header"></legend>
+
+                <!--------Ingreso Nombre de usuario------->
                 <div class="form-group">
                   <span class="col-md-1 col-md-offset-2 text-center"
-                    ><i class="fa fa-user bigicon"></i
-                  ></span>
-                  <div class="col-md-8">
+                    ></span>
+                  <div class="col-md-5">
+                    <label for="id_txtNombre">Nombre</label>
                     <input
-                      id="fname"
-                      name="name"
+                      id="id_txtNombre"
+                      name="txtnombre"
                       type="text"
                       placeholder="Nombre"
                       class="form-control"
                     />
                   </div>
                 </div>
+                <!--------Fin Ingreso Nombre------->
 
+                <!--------Ingreso Apellidos------->
                 <div class="form-group">
                   <span class="col-md-1 col-md-offset-2 text-center"
-                    ><i class="fa fa-user bigicon"></i
-                  ></span>
-                  <div class="col-md-8">
+                    ></span>
+                  <div class="col-md-5">
+                    <label for="id_txtApellidos">Apellidos</label>
                     <input
-                      id="fname"
+                      id="id_txtApellidos"
                       name="name"
                       type="text"
                       placeholder="Apellidos"
@@ -142,74 +158,89 @@
                     />
                   </div>
                 </div>
+                <!--------Fin Ingreso Apellido------->
 
+                <!--------Ingreso Nombre de usuario------->
                 <div class="form-group">
                   <span class="col-md-1 col-md-offset-2 text-center"
-                    ><i class="fa fa-user bigicon"></i
-                  ></span>
-                  <div class="col-md-8">
+                    ></span>
+                  <div class="col-md-5">
+                    <label for="id_txtNombreUsuario">Nombre de usuario</label>
                     <input
-                      id="lname"
-                      name="name"
+                      id="id_txtNombreUsuario"
+                      name="txtnombreusuario"
                       type="text"
                       placeholder="Nombre de usuario"
                       class="form-control"
                     />
                   </div>
                 </div>
+                <!--------Fin Ingreso Nombre de usuario------->
 
+                <!--------Ingreso de Email------->
                 <div class="form-group">
                   <span class="col-md-1 col-md-offset-2 text-center"
-                    ><i class="fa fa-user bigicon"></i
-                  ></span>
-                  <div class="col-md-8">
+                    ></span>
+                  <div class="col-md-5">
+                    <label for="id_txtEmail">Email</label>
                     <input
-                      id="lname"
-                      name="name"
+                      type="email"
+                      name="txtEmail"
+                      class="form-control"
+                      id="id_txtEmail"
+                      aria-describedby="emailHelp"
+                      placeholder="Ingrese su email aquí"
+                    />
+                  </div>
+                </div>
+                <!--------Fin Ingreso de Email------->
+
+                <!--------Ingreso Contrasenna------->
+                <div class="form-group">
+                  <span class="col-md-1 col-md-offset-2 text-center"
+                    ></span>
+                  <div class="col-md-5">
+                    <label for="id_txtContrasena">Contraseña</label>
+                    <input
                       type="password"
-                      placeholder="Contraseña"
                       class="form-control"
+                      name="txtContrasena"
+                      required=""
+                      id="id_txtContrasena"
+                      placeholder="Password"
                     />
                   </div>
                 </div>
+                <!--------Fin Contrasenna------->
 
+                <!--------Ingreso Repetir Contrasenna------->
                 <div class="form-group">
                   <span class="col-md-1 col-md-offset-2 text-center"
-                    ><i class="fa fa-user bigicon"></i
-                  ></span>
-                  <div class="col-md-8">
+                    ></span>
+                  <div class="col-md-5">
+                    <label for="id_txtRepetirConstrasena"
+                      >Repetir Contraseña</label
+                    >
                     <input
-                      id="lname"
-                      name="name"
                       type="password"
-                      placeholder="Repita contraseña"
                       class="form-control"
+                      name="txtRepetirContrasena"
+                      required=""
+                      id="id_txtRepetirContrasena"
+                      placeholder="Password"
                     />
                   </div>
                 </div>
+                <!--------Fin Repetir Contrasenna------->
 
+                <!--------Ingreso Celular------->
                 <div class="form-group">
                   <span class="col-md-1 col-md-offset-2 text-center"
-                    ><i class="fa fa-envelope-o bigicon"></i
-                  ></span>
-                  <div class="col-md-8">
+                    ></span>
+                  <div class="col-md-5">
+                    <label for="id_txtCelular">Celular</label>
                     <input
-                      id="email"
-                      name="email"
-                      type="text"
-                      placeholder="Email"
-                      class="form-control"
-                    />
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <span class="col-md-1 col-md-offset-2 text-center"
-                    ><i class="fa fa-phone-square bigicon"></i
-                  ></span>
-                  <div class="col-md-8">
-                    <input
-                      id="phone"
+                      id="id_txtCelular"
                       name="phone"
                       type="text"
                       placeholder="Celular"
@@ -217,20 +248,25 @@
                     />
                   </div>
                 </div>
-
-                <div class="boton">
-                  <div class="col-md-12 text-center">
-                    <button class="btn btn-primary" type="submit" disabled>
-                      Registrarse
-                    </button>
-                  </div>
-                </div>
+                <!--------Fin Ingreso Celular------->
+                <div class="from-check">
+                  <div class="col-md-12 text-center"></div>
+                  <button class="btn btn-info" type="button" 
+                            name="showpassword" id="showpassword"
+                            value="Ver Password">Ver password</button>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                      </div>
               </fieldset>
             </form>
           </div>
         </div>
       </div>
+    
+  </div>
+    <div class="separadorfooter">
+      <div class="row"></div>
     </div>
+    
 
     <!-- Footer -->
     <footer class="page-footer font-small bg-dark pt-4">
@@ -292,18 +328,15 @@
       </div>
       <!-- Copyright -->
       <div class="footer-copyright text-center py-3 texto-footer">
-        © 2021 Copyright: Grupo 3
+        © 2021 Copyright: Grupo 4
       </div>
       <!-- Copyright -->
     </footer>
     <!-- Footer -->
 
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
+  
+    <!-- incorporamos nuestro javascript con las reglas que deseamos aplicar -->
+    <script src="../js/validador.js" type="text/javascript"></script>
+    <script src="../js/verPassword.js" type="text/javascript"></script>
   </body>
 </html>
