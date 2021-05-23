@@ -10,7 +10,6 @@
     <meta name="author" content="" />
 
     <title>Proyecto Semestral</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="css/bootstrap.min.css" />
 
@@ -113,7 +112,6 @@
         <!-- /.col-lg-3 Items de 3 en 3 -->
 
         <div class="col-lg-10">
-          <!-----carrusel-->
           <div
             id="carouselExampleIndicators"
             class="carousel slide my-4"
@@ -187,34 +185,74 @@
           </div>
 
 
+          <!---------------------Producto 1------------------>
+          <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="products/view/Notebook002.html">
+                  <img
+                    class="card-img-top"
+                    src="img/Notebook/002/002.png"
+                    alt=""
+                  />
+                </a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="products/view/Notebook002.html"
+                      >ASUS TUF Gaming F15</a
+                    >
+                  </h4>
 
+                  <br />
+                  <h5>$ 869.990</h5>
+                  <br />
+                  <p class="card-text">
+                    Obtén el mejor equipo, comprando el Notebook Asus Tuf Gaming
+                    F15 / Fortress Gray / Amd Rayzen 7 / 8 Gb Ram / Nvidia
+                    Geforce gtx 1650 ti / 512 Gb / 15.6". Modelo de tamaño y
+                    capacidad perfecta para llevar tus archivos y programas a
+                    todas partes.
+                  </p>
+                </div>
 
+                <div class="card-footer">
+                  <small class="text-muted"
+                    >&#9733; &#9733; &#9733; &#9733; &#9734;
+                  </small>
+                </div>
+              </div>
+            </div>
 
 <!-------------------------------------------->
 <h1>Platos de comida</h1>
-<button id="btnMostrarPlatosComida">Mostrar platos de comida</button>
-<br><br>
-<div>
-    <table id="tblCategorias" border="1px">
-    </table>
-</div>
+    <button id="btnMostrarPlatosComida">Mostrar platos de comida</button>
+    <br><br>
+    <div>
+        <table id="tblCategorias" border="1px">
+        </table>
+    </div>
+
 
 <script>
-    $(document).ready(function() {
-        $('#btnMostrarPlatosComida').click(function(){
-            $.get("https://www.themealdb.com/api/json/v1/1/categories.php",
-                function(data) {
-                    $.each(data.categories, 
-                        function(i, item) {
-                            var td1 = `<td>${item.idCategory}</td>`;
-                            var td2 = `<td>${item.strCategory}</td>`;
-                            var td3 = `<td><img class="comida" src="${item.strCategoryThumb}"></td>`;
-                            var td4 = `<td>${item.strCategoryDescription}</td>`;
-                            var tr = `<tr>${td1}${td2}${td3}${td4}</tr>`;
-                            $('#tblCategorias').append(tr);
-                        });
-                });
-        });
+  $(document).ready(function() {
+    var plantilla = '<div id:"idID_NUM" class="card h-100" >';
+      plantilla +='<img class="foto" src="URL">';
+      plantilla +='<div class="titulopro">Titulo</div>';
+      plantilla += '</div>';
+
+      $('#btnMostrarPlatosComida').click(function(){
+        $.get("https://publicapi.solotodo.com/products/"),
+        function(data){
+          $.each(data.results,
+          function(i,item){
+            html = plantilla
+              .replace("ID_NUM", i)
+              .replace("URL",item.picture_url)
+              .replace("Titulo", item.name)
+          });
+        }
+
+      });
     });
 </script>
 
@@ -222,7 +260,7 @@
 
 
 
-
+          </div>
           <!-- /.row -->
         </div>
         <!-- /.col-lg-9 -->
