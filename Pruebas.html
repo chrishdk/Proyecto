@@ -1,316 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-
-    <title>Proyecto Semestral</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-
-    <link href="css/Personal.css" rel="stylesheet" />
-  </head>
-
-  <body>
-    <!-- Menu PC / Desplegable celular  -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a href="index.html">
-          <img
-            class="logo-pag"
-            src="img/Pag/Cosas/logo-pagina.png"
-            alt="Logo"
-          />
-        </a>
-        <b class="texto-footer">Pruebas</b>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#Menudesplegablecelular"
-          aria-controls="Menudesplegablecelular"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="Menudesplegablecelular">
-          <ul class="navbar-nav me-auto mb-5 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
-                >Inicio <span class="sr-only"></span
-              ></a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="menu/Hardware.html">Hardware</a>
-            </li>
-
-            <!--<li class="nav-item">
-              <a class="nav-link" href="menu/Software.html">Sofware</a>
-            </li>-->
-
-            <li class="nav-item">
-              <a class="nav-link" href="menu/Notebooks.html">Notebook</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="menu/Contacto.html">Contacto</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="menu/AcercaDe.html">Acerca De</a>
-            </li>
-            
-
-            <li class="nav-item">
-              <a
-                class="btn btn-outline-light my-2 my-sm-0"
-                href="menu/Registro.html"
-                style="position: absolute; right: 20px"
-                >Registrate</a
-              >
-            </li>
-
-            <li class="nav-item">
-              <a
-                class="btn btn-outline-light my-2 my-sm-0"
-                href="menu/InicioSesion.html"
-                style="position: absolute; right: 120px"
-                >Inicia Sesion</a
-              >
-            </li>
-
-            <li class="nav-item">
-              <a href="menu/Carrito.html">
-                <img
-                  class="logo-pag"
-                  src="img/Pag/Carrito/carro_mini.png"
-                  alt="Logo"
-                  style="position: absolute; right: 250px"
-                />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-  
-    <!-- Contenido de la pag -->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-1"></div>
-
-        <!-- /.col-lg-3 Items de 3 en 3 -->
-
-        <div class="col-lg-10">
-          <!-----carrusel-->
-          <div
-            id="carouselExampleIndicators"
-            class="carousel slide my-4"
-            data-ride="carousel"
-          >
-            <ol class="carousel-indicators">
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="0"
-                class="active"
-              ></li>
-
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="1"
-              ></li>
-
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="2"
-              ></li>
-            </ol>
-
-            <div class="carousel-inner" role="listbox">
-              <div class="carousel-item active">
-                <img
-                  class="d-block img-fluid"
-                  src="img/Ofertas/001-fondo-blanco.png"
-                  alt="First slide"
-                />
-              </div>
-
-              <div class="carousel-item">
-                <img
-                  class="d-block img-fluid"
-                  src="img/Ofertas/002-fondo-blanco.png"
-                  alt="Second slide"
-                />
-              </div>
-
-              <div class="carousel-item">
-                <img
-                  class="d-block img-fluid"
-                  src="img/Ofertas/001-fondo-blanco.png"
-                  alt="Third slide"
-                />
-              </div>
-            </div>
-
-            <a
-              class="carousel-control-prev"
-              href="#carouselExampleIndicators"
-              role="button"
-              data-slide="prev"
-            >
-              <span class="carousel-control-prev-icon" aria-hidden="true">
-              </span>
-              <span class="sr-only">Previous </span>
-            </a>
-
-            <a
-              class="carousel-control-next"
-              href="#carouselExampleIndicators"
-              role="button"
-              data-slide="next"
-            >
-              <span class="carousel-control-next-icon" aria-hidden="true">
-              </span>
-              <span class="sr-only">Next </span>
-            </a>
-          </div>
-
-
-
-
-
-<!-------------------------------------------->
-<h1>Platos de comida</h1>
-<button id="btnMostrarPlatosComida">Mostrar platos de comida</button>
-<br><br>
-<div>
-    <table id="tblCategorias" border="1px">
-    </table>
-</div>
-
-<script>
-    $(document).ready(function() {
-        $('#btnMostrarPlatosComida').click(function(){
-            $.get("https://www.themealdb.com/api/json/v1/1/categories.php",
-                function(data) {
-                    $.each(data.categories, 
-                        function(i, item) {
-                            var td1 = `<td>${item.idCategory}</td>`;
-                            var td2 = `<td>${item.strCategory}</td>`;
-                            var td3 = `<td><img class="comida" src="${item.strCategoryThumb}"></td>`;
-                            var td4 = `<td>${item.strCategoryDescription}</td>`;
-                            var tr = `<tr>${td1}${td2}${td3}${td4}</tr>`;
-                            $('#tblCategorias').append(tr);
-                        });
-                });
-        });
-    });
-</script>
-
-
-
-
-
-
-          <!-- /.row -->
-        </div>
-        <!-- /.col-lg-9 -->
-      </div>
-      <!-- /.row -->
-    </div>
-    <div class="separadorfooter">
-      <div class="row"></div>
+    <style>
+        .comida {
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Platos de comida</h1>
+    <button id="btnMostrarPlatosComida">Mostrar platos de comida</button>
+    <br><br>
+    <div>
+        <table id="tblCategorias" border="1px">
+        </table>
     </div>
     
-
-    <!-- Footer -->
-    <footer class="page-footer font-small bg-dark pt-4">
-      <!-- Footer Links -->
-      <div class="container-fluid text-center text-md-left">
-        <!-- Grid row -->
-        <div class="row">
-          <!-- Grid column -->
-          <div class="col-md-6 mt-md-0 mt-3">
-            <!-- Content -->
-            <h5 class="texto-footer">UBICACION</h5>
-            <p class="texto-footer">
-              Calle Siempre Viva 1234, Las Condes, Region Metropolitana
-            </p>
-          </div>
-          <!-- Grid column -->
-
-          <hr class="clearfix w-100 d-md-none pb-3" />
-
-          <!-- Grid column -->
-          <div class="col-md-3 mb-md-0 mb-3">
-            <!-- Links -->
-            <h5 class="text-uppercase texto-footer">Servicios</h5>
-
-            <ul class="list-unstyled">
-              <li>
-                <a href="menu/TerminoCondiciones.html"
-                  >Terminos y condiciones</a
-                >
-              </li>
-              <li>
-                <a href="menu/PoliticaPrivacidad.html"
-                  >Politicas de Privacidad</a
-                >
-              </li>
-            </ul>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-3 mb-md-0 mb-3">
-            <!-- Links -->
-            <h5 class="text-uppercase texto-footer">Redes Sociales</h5>
-
-            <ul class="list-unstyled">
-              <li>
-                <a href="https://www.facebook.com/">Facebook</a>
-              </li>
-              <li>
-                <a href="https://twitter.com/">Twitter</a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/">Instagram</a>
-              </li>
-              <li>
-                <a href="https://www.youtube.com/">Youtube</a>
-              </li>
-            </ul>
-          </div>
-          <!-- Grid column -->
-        </div>
-        <!-- Grid row -->
-      </div>
-      <!-- Copyright -->
-      <div class="footer-copyright text-center py-3 texto-footer">
-        © 2021 Copyright: Grupo 4
-      </div>
-      <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
-
-    <!--Scrips-->
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+    <script>
+        $(document).ready(function() {
+            $('#btnMostrarPlatosComida').click(function(){
+                $.get("https://publicapi.solotodo.com/products/",
+                    function(data) {
+                        $.each(data.results, 
+                            function(i, item) {
+                                var td1 = `<td>${item.id}</td>`;
+                                var td2 = `<td>${item.name}</td>`;
+                                var td3 = `<td><img class="comida" src="${item.picture_url}"></td>`;
+                                var tr = `<tr>${td1}${td2}${td3}</tr>`;
+                                $('#tblCategorias').append(tr);
+                            });
+                    });
+            });
+        });
+    </script>
+</body>
 </html>
