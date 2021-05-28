@@ -205,7 +205,7 @@
               $('#btnPrueba').click(function(){
                 $.get("https://publicapi.solotodo.com/products/",
                     function(data) {
-                      $.each(data.products,
+                      $.each(data.results,
                         function(i, item){
                           html = plantilla.replace("ID_NUM", i)
                                           .replace("URL", item.picture_url)
