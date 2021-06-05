@@ -97,172 +97,185 @@
       <div class="row">
         <div class="col-lg-1"></div>
 
-          <!-- /.col-lg-3 Items de 3 en 3 -->
+        <!-- /.col-lg-3 Items de 3 en 3 -->
 
-          <div class="col-lg-10">
-            <div
-              id="carouselExampleIndicators"
-              class="carousel slide my-4"
-              data-ride="carousel"
-            >
-              <ol class="carousel-indicators">
-                <li
-                  data-target="#carouselExampleIndicators"
-                  data-slide-to="0"
-                  class="active"
-                ></li>
+        <div class="col-lg-10">
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide my-4"
+            data-ride="carousel"
+          >
+            <ol class="carousel-indicators">
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="0"
+                class="active"
+              ></li>
 
-                <li
-                  data-target="#carouselExampleIndicators"
-                  data-slide-to="1"
-                ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="1"
+              ></li>
 
-                <li
-                  data-target="#carouselExampleIndicators"
-                  data-slide-to="2"
-                ></li>
-              </ol>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="2"
+              ></li>
+            </ol>
 
-              <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                  <img
-                    class="d-block img-fluid"
-                    src="img/Ofertas/001-fondo-blanco.png"
-                    alt="First slide"
-                  />
-                </div>
-
-                <div class="carousel-item">
-                  <img
-                    class="d-block img-fluid"
-                    src="img/Ofertas/002-fondo-blanco.png"
-                    alt="Second slide"
-                  />
-                </div>
-
-                <div class="carousel-item">
-                  <img
-                    class="d-block img-fluid"
-                    src="img/Ofertas/001-fondo-blanco.png"
-                    alt="Third slide"
-                  />
-                </div>
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <img
+                  class="d-block img-fluid"
+                  src="img/Ofertas/001-fondo-blanco.png"
+                  alt="First slide"
+                />
               </div>
 
-              <a
-                class="carousel-control-prev"
-                href="#carouselExampleIndicators"
-                role="button"
-                data-slide="prev"
-              >
-                <span class="carousel-control-prev-icon" aria-hidden="true">
-                </span>
-                <span class="sr-only">Previous </span>
-              </a>
+              <div class="carousel-item">
+                <img
+                  class="d-block img-fluid"
+                  src="img/Ofertas/002-fondo-blanco.png"
+                  alt="Second slide"
+                />
+              </div>
 
-              <a
-                class="carousel-control-next"
-                href="#carouselExampleIndicators"
-                role="button"
-                data-slide="next"
-              >
-                <span class="carousel-control-next-icon" aria-hidden="true">
-                </span>
-                <span class="sr-only">Next </span>
-              </a>
+              <div class="carousel-item">
+                <img
+                  class="d-block img-fluid"
+                  src="img/Ofertas/001-fondo-blanco.png"
+                  alt="Third slide"
+                />
+              </div>
             </div>
 
+            <a
+              class="carousel-control-prev"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="prev"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true">
+              </span>
+              <span class="sr-only">Previous </span>
+            </a>
 
-            <!---------------------Producto 1------------------>
-            <div class="row">
-              <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card h-100">
-                  <a href="products/view/Notebook002.html">
-                    <img
-                      class="card-img-top"
-                      src="img/Notebook/002/002.png"
-                      alt=""
-                    />
-                  </a>
-                  <div class="card-body">
-                    <h4 class="card-title">
-                      <a id="nombre_producto" href="products/view/Notebook002.html"
-                        >ASUS TUF Gaming F15</a
-                      >
-                    </h4>
+            <a
+              class="carousel-control-next"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="next"
+            >
+              <span class="carousel-control-next-icon" aria-hidden="true">
+              </span>
+              <span class="sr-only">Next </span>
+            </a>
+          </div>
 
-                    <br />
-                    <h5>$ 869.990</h5>
-                    <p id="price_product"></p>
-                    <br />
-                    <p class="card-text">
-                      Obtén el mejor equipo, comprando el Notebook Asus Tuf Gaming
-                      F15 / Fortress Gray / Amd Rayzen 7 / 8 Gb Ram / Nvidia
-                      Geforce gtx 1650 ti / 512 Gb / 15.6". Modelo de tamaño y
-                      capacidad perfecta para llevar tus archivos y programas a
-                      todas partes.
-                    </p>
-                  </div>
-
-                  <div class="card-footer">
-                    <small class="text-muted">
-                      &#9733; &#9733; &#9733; &#9733; &#9734;
-                    </small>
-                      <button type="button" class="btn btn-primary" id="btnBuscar"  style="FONT-SIZE: 8pt; FONT-FAMILY: Verdana; float: right;"> Comparar Precios </button>
-                    
-                  </div>
-
-    </div>
-  </div>
-
-    <script>
-      document.querySelector("#btnBuscar").addEventListener('click', function () {
-        var txtProducto = document.getElementById("nombre_producto").innerHTML;
-        console.log(txtProducto);
-        obtener_registro1(txtProducto);
-      });
-      function obtener_registro1(str) {
-
-        let url = 'https://publicapi.solotodo.com/products/browse/?search=' + str;
-
-        const api = new XMLHttpRequest();
-
-        api.onreadystatechange = function () {
-          if (this.readyState == 4 && this.status == 200) {
-            let datos = JSON.parse(this.responseText);
-          
-            // ID Producto
-            var id = datos.results[0].product.id;
-            console.log(datos.results[0].product.id);
-            let url1 = "https://publicapi.solotodo.com/products/available_entities/?ids=" + id + "&stores=1085&stores=30&stores=3&stores=279&stores=1119&stores=128&stores=920&stores=138&stores=1712&stores=4&stores=722&stores=788&stores=285&stores=201&stores=398&stores=397&stores=755&stores=31&stores=61&stores=193&stores=7&stores=1052&stores=255&stores=656&stores=16&stores=426&stores=261&stores=88&stores=1481&stores=1580&stores=291&stores=283&stores=1382&stores=172&stores=38&stores=723&stores=559&stores=9&stores=326&stores=822&stores=1349&stores=289&stores=689&stores=1679&stores=427&stores=1217&stores=21&stores=1448&stores=286&stores=1811&stores=284&stores=232&stores=87&stores=27&stores=281&stores=263&stores=56&stores=1283&stores=256&stores=954&stores=197&stores=292&stores=5&stores=524&stores=199&stores=43&stores=76&stores=228&stores=294&stores=174&stores=23&stores=290&stores=392&stores=887&stores=260&stores=195&stores=225&stores=262&stores=115&stores=1646&stores=265&stores=287&stores=37&stores=118&stores=39&stores=921&stores=116&stores=1250&stores=257&stores=266&stores=986&stores=1713&stores=11&stores=278&stores=34&stores=12&stores=854&stores=198&stores=1547&stores=1251&stores=1118&stores=267&stores=953&stores=28&stores=186&stores=68&stores=106&stores=18&stores=223&stores=194&stores=1316&stores=1019&stores=282&stores=956&stores=293&stores=1779&stores=623&stores=67&stores=1415&stores=47&stores=425&stores=86&stores=183&stores=22&stores=1514&stores=955&stores=1086&stores=1745&stores=227&stores=176&stores=181&stores=167&stores=173&stores=264&stores=1449&stores=35&stores=170&stores=6&stores=280&stores=789&stores=359&stores=558&stores=114&stores=44&stores=1647&stores=821&stores=63&stores=1778&stores=495&stores=14&stores=239&stores=45&stores=1613&stores=85&stores=1151&stores=91&exclude_refurbished=undefined"
-            console.log(url1)
-            api.open("GET", url1, true)
-            api.send();
-            api.onreadystatechange = function () {
-              if (this.readyState == 4 && this.status == 200) {
-                let datos1 = JSON.parse(this.responseText);
-                // Precio Producto
-                var price = 'Solotodo: $' + datos1.results[0].entities[0].active_registry.offer_price.split('.')[0];
-                console.log(price);
-                document.getElementById("price_product").innerHTML = price;
-
-              }
-            }
-          }
-        };
-        api.open("GET", url, true);
-        api.send();
-      }
-    </script>
-                    
-                  
-
-
-
-             <!---------------------Producto 2------------------>
+          <!---------------------Producto 1------------------>
+          <div class="row">
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a  href="products/view/TarjetaVideo001.html"
+                <a href="products/view/Notebook002.html">
+                  <img
+                    class="card-img-top"
+                    src="img/Notebook/002/002.png"
+                    alt=""
+                  />
+                </a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a
+                      id="nombre_producto"
+                      href="products/view/Notebook002.html"
+                      >ASUS TUF Gaming F15</a
+                    >
+                  </h4>
+
+                  <br />
+                  <h5>$ 869.990</h5>
+                  <p id="price_product"></p>
+                  <br />
+                  <p class="card-text">
+                    Obtén el mejor equipo, comprando el Notebook Asus Tuf Gaming
+                    F15 / Fortress Gray / Amd Rayzen 7 / 8 Gb Ram / Nvidia
+                    Geforce gtx 1650 ti / 512 Gb / 15.6". Modelo de tamaño y
+                    capacidad perfecta para llevar tus archivos y programas a
+                    todas partes.
+                  </p>
+                </div>
+
+                <div class="card-footer">
+                  <small class="text-muted">
+                    &#9733; &#9733; &#9733; &#9733; &#9734;
+                  </small>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="btnBuscar"
+                    style="font-size: 8pt; font-family: Verdana; float: right"
+                  >
+                    Comparar Precios
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <script>
+              document
+                .querySelector("#btnBuscar")
+                .addEventListener("click", function () {
+                  var txtProducto =
+                    document.getElementById("nombre_producto").innerHTML;
+                  console.log(txtProducto);
+                  obtener_registro1(txtProducto);
+                });
+              function obtener_registro1(str) {
+                let url =
+                  "https://publicapi.solotodo.com/products/browse/?search=" +
+                  str;
+
+                const api = new XMLHttpRequest();
+
+                api.onreadystatechange = function () {
+                  if (this.readyState == 4 && this.status == 200) {
+                    let datos = JSON.parse(this.responseText);
+
+                    // ID Producto
+                    var id = datos.results[0].product.id;
+                    console.log(datos.results[0].product.id);
+                    let url1 =
+                      "https://publicapi.solotodo.com/products/available_entities/?ids=" +
+                      id +
+                      "&stores=1085&stores=30&stores=3&stores=279&stores=1119&stores=128&stores=920&stores=138&stores=1712&stores=4&stores=722&stores=788&stores=285&stores=201&stores=398&stores=397&stores=755&stores=31&stores=61&stores=193&stores=7&stores=1052&stores=255&stores=656&stores=16&stores=426&stores=261&stores=88&stores=1481&stores=1580&stores=291&stores=283&stores=1382&stores=172&stores=38&stores=723&stores=559&stores=9&stores=326&stores=822&stores=1349&stores=289&stores=689&stores=1679&stores=427&stores=1217&stores=21&stores=1448&stores=286&stores=1811&stores=284&stores=232&stores=87&stores=27&stores=281&stores=263&stores=56&stores=1283&stores=256&stores=954&stores=197&stores=292&stores=5&stores=524&stores=199&stores=43&stores=76&stores=228&stores=294&stores=174&stores=23&stores=290&stores=392&stores=887&stores=260&stores=195&stores=225&stores=262&stores=115&stores=1646&stores=265&stores=287&stores=37&stores=118&stores=39&stores=921&stores=116&stores=1250&stores=257&stores=266&stores=986&stores=1713&stores=11&stores=278&stores=34&stores=12&stores=854&stores=198&stores=1547&stores=1251&stores=1118&stores=267&stores=953&stores=28&stores=186&stores=68&stores=106&stores=18&stores=223&stores=194&stores=1316&stores=1019&stores=282&stores=956&stores=293&stores=1779&stores=623&stores=67&stores=1415&stores=47&stores=425&stores=86&stores=183&stores=22&stores=1514&stores=955&stores=1086&stores=1745&stores=227&stores=176&stores=181&stores=167&stores=173&stores=264&stores=1449&stores=35&stores=170&stores=6&stores=280&stores=789&stores=359&stores=558&stores=114&stores=44&stores=1647&stores=821&stores=63&stores=1778&stores=495&stores=14&stores=239&stores=45&stores=1613&stores=85&stores=1151&stores=91&exclude_refurbished=undefined";
+                    console.log(url1);
+                    api.open("GET", url1, true);
+                    api.send();
+                    api.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        let datos1 = JSON.parse(this.responseText);
+                        // Precio Producto
+                        var price =
+                          "Solotodo: $" +
+                          datos1.results[0].entities[0].active_registry.offer_price.split(
+                            "."
+                          )[0];
+                        console.log(price);
+                        document.getElementById("price_product").innerHTML =
+                          price;
+                      }
+                    };
+                  }
+                };
+                api.open("GET", url, true);
+                api.send();
+              }
+            </script>
+
+            <!---------------------Producto 2------------------>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="products/view/TarjetaVideo001.html"
                   ><img
                     class="card-img-top"
                     src="img/Componentes/Video/001/001.png"
@@ -270,7 +283,9 @@
                 /></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a id="nombre_producto2" href="products/view/TarjetaVideo001.html"
+                    <a
+                      id="nombre_producto2"
+                      href="products/view/TarjetaVideo001.html"
                       >MSI GeForce GTX 1660 GAMING X 6G</a
                     >
                   </h4>
@@ -286,55 +301,71 @@
                 <div class="card-footer">
                   <small class="text-muted"
                     >&#9733; &#9733; &#9733; &#9733; &#9734;</small
-                    
                   >
-                  <button type="button" class="btn btn-primary" id="btnBuscar2"  style="FONT-SIZE: 8pt; FONT-FAMILY: Verdana;float: right;"> Comparar Precios </button>
-  </div>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="btnBuscar2"
+                    style="font-size: 8pt; font-family: Verdana; float: right"
+                  >
+                    Comparar Precios
+                  </button>
+                </div>
+              </div>
+            </div>
 
-</div>
-</div>
+            <script>
+              document
+                .querySelector("#btnBuscar2")
+                .addEventListener("click", function () {
+                  var txtProducto =
+                    document.getElementById("nombre_producto2").innerHTML;
+                  console.log(txtProducto);
+                  obtener_registro2(txtProducto);
+                });
+              function obtener_registro2(str) {
+                let url =
+                  "https://publicapi.solotodo.com/products/browse/?search=" +
+                  str;
 
-<script>
-  document.querySelector("#btnBuscar2").addEventListener('click', function () {
-    var txtProducto = document.getElementById("nombre_producto2").innerHTML;
-    console.log(txtProducto);
-    obtener_registro2(txtProducto);
-  });
-  function obtener_registro2(str) {
+                const api = new XMLHttpRequest();
 
-    let url = 'https://publicapi.solotodo.com/products/browse/?search=' + str;
+                api.onreadystatechange = function () {
+                  if (this.readyState == 4 && this.status == 200) {
+                    let datos = JSON.parse(this.responseText);
 
-    const api = new XMLHttpRequest();
+                    // ID Producto
+                    var id = datos.results[0].product.id;
+                    console.log(datos.results[0].product.id);
+                    let url1 =
+                      "https://publicapi.solotodo.com/products/available_entities/?ids=" +
+                      id +
+                      "&stores=1085&stores=30&stores=3&stores=279&stores=1119&stores=128&stores=920&stores=138&stores=1712&stores=4&stores=722&stores=788&stores=285&stores=201&stores=398&stores=397&stores=755&stores=31&stores=61&stores=193&stores=7&stores=1052&stores=255&stores=656&stores=16&stores=426&stores=261&stores=88&stores=1481&stores=1580&stores=291&stores=283&stores=1382&stores=172&stores=38&stores=723&stores=559&stores=9&stores=326&stores=822&stores=1349&stores=289&stores=689&stores=1679&stores=427&stores=1217&stores=21&stores=1448&stores=286&stores=1811&stores=284&stores=232&stores=87&stores=27&stores=281&stores=263&stores=56&stores=1283&stores=256&stores=954&stores=197&stores=292&stores=5&stores=524&stores=199&stores=43&stores=76&stores=228&stores=294&stores=174&stores=23&stores=290&stores=392&stores=887&stores=260&stores=195&stores=225&stores=262&stores=115&stores=1646&stores=265&stores=287&stores=37&stores=118&stores=39&stores=921&stores=116&stores=1250&stores=257&stores=266&stores=986&stores=1713&stores=11&stores=278&stores=34&stores=12&stores=854&stores=198&stores=1547&stores=1251&stores=1118&stores=267&stores=953&stores=28&stores=186&stores=68&stores=106&stores=18&stores=223&stores=194&stores=1316&stores=1019&stores=282&stores=956&stores=293&stores=1779&stores=623&stores=67&stores=1415&stores=47&stores=425&stores=86&stores=183&stores=22&stores=1514&stores=955&stores=1086&stores=1745&stores=227&stores=176&stores=181&stores=167&stores=173&stores=264&stores=1449&stores=35&stores=170&stores=6&stores=280&stores=789&stores=359&stores=558&stores=114&stores=44&stores=1647&stores=821&stores=63&stores=1778&stores=495&stores=14&stores=239&stores=45&stores=1613&stores=85&stores=1151&stores=91&exclude_refurbished=undefined";
+                    console.log(url1);
+                    api.open("GET", url1, true);
+                    api.send();
+                    api.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        let datos1 = JSON.parse(this.responseText);
+                        // Precio Producto
+                        var price =
+                          "Solotodo: $" +
+                          datos1.results[0].entities[0].active_registry.offer_price.split(
+                            "."
+                          )[0];
+                        console.log(price);
+                        document.getElementById("price_product2").innerHTML =
+                          price;
+                      }
+                    };
+                  }
+                };
+                api.open("GET", url, true);
+                api.send();
+              }
+            </script>
 
-    api.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
-        let datos = JSON.parse(this.responseText);
-        
-        // ID Producto
-        var id = datos.results[0].product.id;
-        console.log(datos.results[0].product.id);
-        let url1 = "https://publicapi.solotodo.com/products/available_entities/?ids=" + id + "&stores=1085&stores=30&stores=3&stores=279&stores=1119&stores=128&stores=920&stores=138&stores=1712&stores=4&stores=722&stores=788&stores=285&stores=201&stores=398&stores=397&stores=755&stores=31&stores=61&stores=193&stores=7&stores=1052&stores=255&stores=656&stores=16&stores=426&stores=261&stores=88&stores=1481&stores=1580&stores=291&stores=283&stores=1382&stores=172&stores=38&stores=723&stores=559&stores=9&stores=326&stores=822&stores=1349&stores=289&stores=689&stores=1679&stores=427&stores=1217&stores=21&stores=1448&stores=286&stores=1811&stores=284&stores=232&stores=87&stores=27&stores=281&stores=263&stores=56&stores=1283&stores=256&stores=954&stores=197&stores=292&stores=5&stores=524&stores=199&stores=43&stores=76&stores=228&stores=294&stores=174&stores=23&stores=290&stores=392&stores=887&stores=260&stores=195&stores=225&stores=262&stores=115&stores=1646&stores=265&stores=287&stores=37&stores=118&stores=39&stores=921&stores=116&stores=1250&stores=257&stores=266&stores=986&stores=1713&stores=11&stores=278&stores=34&stores=12&stores=854&stores=198&stores=1547&stores=1251&stores=1118&stores=267&stores=953&stores=28&stores=186&stores=68&stores=106&stores=18&stores=223&stores=194&stores=1316&stores=1019&stores=282&stores=956&stores=293&stores=1779&stores=623&stores=67&stores=1415&stores=47&stores=425&stores=86&stores=183&stores=22&stores=1514&stores=955&stores=1086&stores=1745&stores=227&stores=176&stores=181&stores=167&stores=173&stores=264&stores=1449&stores=35&stores=170&stores=6&stores=280&stores=789&stores=359&stores=558&stores=114&stores=44&stores=1647&stores=821&stores=63&stores=1778&stores=495&stores=14&stores=239&stores=45&stores=1613&stores=85&stores=1151&stores=91&exclude_refurbished=undefined"
-        console.log(url1)
-        api.open("GET", url1, true)
-        api.send();
-        api.onreadystatechange = function () {
-          if (this.readyState == 4 && this.status == 200) {
-            let datos1 = JSON.parse(this.responseText);
-            // Precio Producto
-            var price = 'Solotodo: $' + datos1.results[0].entities[0].active_registry.offer_price.split('.')[0];
-            console.log(price);
-            document.getElementById("price_product2").innerHTML = price;
-
-          }
-        }
-      }
-    };
-    api.open("GET", url, true);
-    api.send();
-  }
-</script>
-
- <!---------------------Producto 3------------------>
+            <!---------------------Producto 3------------------>
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
                 <a href="products/view/Ram001.html"
@@ -366,55 +397,70 @@
                   <small class="text-muted"
                     >&#9733; &#9733; &#9733; &#9733; &#9734;</small
                   >
-                  <button type="button" class="btn btn-primary" id="btnBuscar3"  style="FONT-SIZE: 8pt; FONT-FAMILY: Verdana;float: right;"> Comparar Precios </button>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="btnBuscar3"
+                    style="font-size: 8pt; font-family: Verdana; float: right"
+                  >
+                    Comparar Precios
+                  </button>
                 </div>
+              </div>
+            </div>
 
-              
-              </div>
-              </div>
-              
-              <script>
-                document.querySelector("#btnBuscar3").addEventListener('click', function () {
-                  var txtProducto = document.getElementById("nombre_producto3").innerHTML;
+            <script>
+              document
+                .querySelector("#btnBuscar3")
+                .addEventListener("click", function () {
+                  var txtProducto =
+                    document.getElementById("nombre_producto3").innerHTML;
                   console.log(txtProducto);
                   obtener_registro3(txtProducto);
                 });
-                function obtener_registro3(str) {
-              
-                  let url = 'https://publicapi.solotodo.com/products/browse/?search=' + str;
-              
-                  const api = new XMLHttpRequest();
-              
-                  api.onreadystatechange = function () {
-                    if (this.readyState == 4 && this.status == 200) {
-                      let datos = JSON.parse(this.responseText);
-                    
-                      // ID Producto
-                      var id = datos.results[0].product.id;
-                      console.log(datos.results[0].product.id);
-                      let url1 = "https://publicapi.solotodo.com/products/available_entities/?ids=" + id + "&stores=1085&stores=30&stores=3&stores=279&stores=1119&stores=128&stores=920&stores=138&stores=1712&stores=4&stores=722&stores=788&stores=285&stores=201&stores=398&stores=397&stores=755&stores=31&stores=61&stores=193&stores=7&stores=1052&stores=255&stores=656&stores=16&stores=426&stores=261&stores=88&stores=1481&stores=1580&stores=291&stores=283&stores=1382&stores=172&stores=38&stores=723&stores=559&stores=9&stores=326&stores=822&stores=1349&stores=289&stores=689&stores=1679&stores=427&stores=1217&stores=21&stores=1448&stores=286&stores=1811&stores=284&stores=232&stores=87&stores=27&stores=281&stores=263&stores=56&stores=1283&stores=256&stores=954&stores=197&stores=292&stores=5&stores=524&stores=199&stores=43&stores=76&stores=228&stores=294&stores=174&stores=23&stores=290&stores=392&stores=887&stores=260&stores=195&stores=225&stores=262&stores=115&stores=1646&stores=265&stores=287&stores=37&stores=118&stores=39&stores=921&stores=116&stores=1250&stores=257&stores=266&stores=986&stores=1713&stores=11&stores=278&stores=34&stores=12&stores=854&stores=198&stores=1547&stores=1251&stores=1118&stores=267&stores=953&stores=28&stores=186&stores=68&stores=106&stores=18&stores=223&stores=194&stores=1316&stores=1019&stores=282&stores=956&stores=293&stores=1779&stores=623&stores=67&stores=1415&stores=47&stores=425&stores=86&stores=183&stores=22&stores=1514&stores=955&stores=1086&stores=1745&stores=227&stores=176&stores=181&stores=167&stores=173&stores=264&stores=1449&stores=35&stores=170&stores=6&stores=280&stores=789&stores=359&stores=558&stores=114&stores=44&stores=1647&stores=821&stores=63&stores=1778&stores=495&stores=14&stores=239&stores=45&stores=1613&stores=85&stores=1151&stores=91&exclude_refurbished=undefined"
-                      console.log(url1)
-                      api.open("GET", url1, true)
-                      api.send();
-                      api.onreadystatechange = function () {
-                        if (this.readyState == 4 && this.status == 200) {
-                          let datos1 = JSON.parse(this.responseText);
-                          // Precio Producto
-                          var price = 'Solotodo: $' + datos1.results[0].entities[0].active_registry.offer_price.split('.')[0];
-                          console.log(price);
-                          document.getElementById("price_product3").innerHTML = price;
-              
-                        }
+              function obtener_registro3(str) {
+                let url =
+                  "https://publicapi.solotodo.com/products/browse/?search=" +
+                  str;
+
+                const api = new XMLHttpRequest();
+
+                api.onreadystatechange = function () {
+                  if (this.readyState == 4 && this.status == 200) {
+                    let datos = JSON.parse(this.responseText);
+
+                    // ID Producto
+                    var id = datos.results[0].product.id;
+                    console.log(datos.results[0].product.id);
+                    let url1 =
+                      "https://publicapi.solotodo.com/products/available_entities/?ids=" +
+                      id +
+                      "&stores=1085&stores=30&stores=3&stores=279&stores=1119&stores=128&stores=920&stores=138&stores=1712&stores=4&stores=722&stores=788&stores=285&stores=201&stores=398&stores=397&stores=755&stores=31&stores=61&stores=193&stores=7&stores=1052&stores=255&stores=656&stores=16&stores=426&stores=261&stores=88&stores=1481&stores=1580&stores=291&stores=283&stores=1382&stores=172&stores=38&stores=723&stores=559&stores=9&stores=326&stores=822&stores=1349&stores=289&stores=689&stores=1679&stores=427&stores=1217&stores=21&stores=1448&stores=286&stores=1811&stores=284&stores=232&stores=87&stores=27&stores=281&stores=263&stores=56&stores=1283&stores=256&stores=954&stores=197&stores=292&stores=5&stores=524&stores=199&stores=43&stores=76&stores=228&stores=294&stores=174&stores=23&stores=290&stores=392&stores=887&stores=260&stores=195&stores=225&stores=262&stores=115&stores=1646&stores=265&stores=287&stores=37&stores=118&stores=39&stores=921&stores=116&stores=1250&stores=257&stores=266&stores=986&stores=1713&stores=11&stores=278&stores=34&stores=12&stores=854&stores=198&stores=1547&stores=1251&stores=1118&stores=267&stores=953&stores=28&stores=186&stores=68&stores=106&stores=18&stores=223&stores=194&stores=1316&stores=1019&stores=282&stores=956&stores=293&stores=1779&stores=623&stores=67&stores=1415&stores=47&stores=425&stores=86&stores=183&stores=22&stores=1514&stores=955&stores=1086&stores=1745&stores=227&stores=176&stores=181&stores=167&stores=173&stores=264&stores=1449&stores=35&stores=170&stores=6&stores=280&stores=789&stores=359&stores=558&stores=114&stores=44&stores=1647&stores=821&stores=63&stores=1778&stores=495&stores=14&stores=239&stores=45&stores=1613&stores=85&stores=1151&stores=91&exclude_refurbished=undefined";
+                    console.log(url1);
+                    api.open("GET", url1, true);
+                    api.send();
+                    api.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        let datos1 = JSON.parse(this.responseText);
+                        // Precio Producto
+                        var price =
+                          "Solotodo: $" +
+                          datos1.results[0].entities[0].active_registry.offer_price.split(
+                            "."
+                          )[0];
+                        console.log(price);
+                        document.getElementById("price_product3").innerHTML =
+                          price;
                       }
-                    }
-                  };
-                  api.open("GET", url, true);
-                  api.send();
-                }
-              </script>
+                    };
+                  }
+                };
+                api.open("GET", url, true);
+                api.send();
+              }
+            </script>
 
-
- <!---------------------Producto 4------------------>
+            <!---------------------Producto 4------------------>
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
                 <a href="products/view/Cpu001.html"
@@ -445,53 +491,70 @@
                   <small class="text-muted"
                     >&#9733; &#9733; &#9733; &#9733; &#9734;</small
                   >
-                  <button type="button" class="btn btn-primary" id="btnBuscar4"  style="FONT-SIZE: 8pt; FONT-FAMILY: Verdana;float: right;"> Comparar Precios </button>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="btnBuscar4"
+                    style="font-size: 8pt; font-family: Verdana; float: right"
+                  >
+                    Comparar Precios
+                  </button>
                 </div>
-              
-              </div></div>
-              
-              <script>
-                document.querySelector("#btnBuscar4").addEventListener('click', function () {
-                  var txtProducto = document.getElementById("nombre_producto").innerHTML;
+              </div>
+            </div>
+
+            <script>
+              document
+                .querySelector("#btnBuscar4")
+                .addEventListener("click", function () {
+                  var txtProducto =
+                    document.getElementById("nombre_producto").innerHTML;
                   console.log(txtProducto);
                   obtener_registro4(txtProducto);
                 });
-                function obtener_registro4(str) {
-              
-                  let url = 'https://publicapi.solotodo.com/products/browse/?search=' + str;
-              
-                  const api = new XMLHttpRequest();
-              
-                  api.onreadystatechange = function () {
-                    if (this.readyState == 4 && this.status == 200) {
-                      let datos = JSON.parse(this.responseText);
-                      
-                      // ID Producto
-                      var id = datos.results[0].product.id;
-                      console.log(datos.results[0].product.id);
-                      let url1 = "https://publicapi.solotodo.com/products/available_entities/?ids=" + id + "&stores=1085&stores=30&stores=3&stores=279&stores=1119&stores=128&stores=920&stores=138&stores=1712&stores=4&stores=722&stores=788&stores=285&stores=201&stores=398&stores=397&stores=755&stores=31&stores=61&stores=193&stores=7&stores=1052&stores=255&stores=656&stores=16&stores=426&stores=261&stores=88&stores=1481&stores=1580&stores=291&stores=283&stores=1382&stores=172&stores=38&stores=723&stores=559&stores=9&stores=326&stores=822&stores=1349&stores=289&stores=689&stores=1679&stores=427&stores=1217&stores=21&stores=1448&stores=286&stores=1811&stores=284&stores=232&stores=87&stores=27&stores=281&stores=263&stores=56&stores=1283&stores=256&stores=954&stores=197&stores=292&stores=5&stores=524&stores=199&stores=43&stores=76&stores=228&stores=294&stores=174&stores=23&stores=290&stores=392&stores=887&stores=260&stores=195&stores=225&stores=262&stores=115&stores=1646&stores=265&stores=287&stores=37&stores=118&stores=39&stores=921&stores=116&stores=1250&stores=257&stores=266&stores=986&stores=1713&stores=11&stores=278&stores=34&stores=12&stores=854&stores=198&stores=1547&stores=1251&stores=1118&stores=267&stores=953&stores=28&stores=186&stores=68&stores=106&stores=18&stores=223&stores=194&stores=1316&stores=1019&stores=282&stores=956&stores=293&stores=1779&stores=623&stores=67&stores=1415&stores=47&stores=425&stores=86&stores=183&stores=22&stores=1514&stores=955&stores=1086&stores=1745&stores=227&stores=176&stores=181&stores=167&stores=173&stores=264&stores=1449&stores=35&stores=170&stores=6&stores=280&stores=789&stores=359&stores=558&stores=114&stores=44&stores=1647&stores=821&stores=63&stores=1778&stores=495&stores=14&stores=239&stores=45&stores=1613&stores=85&stores=1151&stores=91&exclude_refurbished=undefined"
-                      console.log(url1)
-                      api.open("GET", url1, true)
-                      api.send();
-                      api.onreadystatechange = function () {
-                        if (this.readyState == 4 && this.status == 200) {
-                          let datos1 = JSON.parse(this.responseText);
-                          // Precio Producto
-                          var price = 'Solotodo: $' + datos1.results[0].entities[0].active_registry.offer_price.split('.')[0];
-                          console.log(price);
-                          document.getElementById("price_product4").innerHTML = price;
-              
-                        }
+              function obtener_registro4(str) {
+                let url =
+                  "https://publicapi.solotodo.com/products/browse/?search=" +
+                  str;
+
+                const api = new XMLHttpRequest();
+
+                api.onreadystatechange = function () {
+                  if (this.readyState == 4 && this.status == 200) {
+                    let datos = JSON.parse(this.responseText);
+
+                    // ID Producto
+                    var id = datos.results[0].product.id;
+                    console.log(datos.results[0].product.id);
+                    let url1 =
+                      "https://publicapi.solotodo.com/products/available_entities/?ids=" +
+                      id +
+                      "&stores=1085&stores=30&stores=3&stores=279&stores=1119&stores=128&stores=920&stores=138&stores=1712&stores=4&stores=722&stores=788&stores=285&stores=201&stores=398&stores=397&stores=755&stores=31&stores=61&stores=193&stores=7&stores=1052&stores=255&stores=656&stores=16&stores=426&stores=261&stores=88&stores=1481&stores=1580&stores=291&stores=283&stores=1382&stores=172&stores=38&stores=723&stores=559&stores=9&stores=326&stores=822&stores=1349&stores=289&stores=689&stores=1679&stores=427&stores=1217&stores=21&stores=1448&stores=286&stores=1811&stores=284&stores=232&stores=87&stores=27&stores=281&stores=263&stores=56&stores=1283&stores=256&stores=954&stores=197&stores=292&stores=5&stores=524&stores=199&stores=43&stores=76&stores=228&stores=294&stores=174&stores=23&stores=290&stores=392&stores=887&stores=260&stores=195&stores=225&stores=262&stores=115&stores=1646&stores=265&stores=287&stores=37&stores=118&stores=39&stores=921&stores=116&stores=1250&stores=257&stores=266&stores=986&stores=1713&stores=11&stores=278&stores=34&stores=12&stores=854&stores=198&stores=1547&stores=1251&stores=1118&stores=267&stores=953&stores=28&stores=186&stores=68&stores=106&stores=18&stores=223&stores=194&stores=1316&stores=1019&stores=282&stores=956&stores=293&stores=1779&stores=623&stores=67&stores=1415&stores=47&stores=425&stores=86&stores=183&stores=22&stores=1514&stores=955&stores=1086&stores=1745&stores=227&stores=176&stores=181&stores=167&stores=173&stores=264&stores=1449&stores=35&stores=170&stores=6&stores=280&stores=789&stores=359&stores=558&stores=114&stores=44&stores=1647&stores=821&stores=63&stores=1778&stores=495&stores=14&stores=239&stores=45&stores=1613&stores=85&stores=1151&stores=91&exclude_refurbished=undefined";
+                    console.log(url1);
+                    api.open("GET", url1, true);
+                    api.send();
+                    api.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        let datos1 = JSON.parse(this.responseText);
+                        // Precio Producto
+                        var price =
+                          "Solotodo: $" +
+                          datos1.results[0].entities[0].active_registry.offer_price.split(
+                            "."
+                          )[0];
+                        console.log(price);
+                        document.getElementById("price_product4").innerHTML =
+                          price;
                       }
-                    }
-                  };
-                  api.open("GET", url, true);
-                  api.send();
-                }
-              </script>
+                    };
+                  }
+                };
+                api.open("GET", url, true);
+                api.send();
+              }
+            </script>
 
-
- <!---------------------Producto 5------------------>
+            <!---------------------Producto 5------------------>
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
                 <a href="products/view/Notebook004.html"
@@ -502,73 +565,90 @@
                 /></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a id="nombre_producto5" href="products/view/Notebook004.html">ASUS Chromebook C423NA-WB04</a>
+                    <a
+                      id="nombre_producto5"
+                      href="products/view/Notebook004.html"
+                      >ASUS Chromebook C423NA-WB04</a
+                    >
                   </h4>
                   <br />
                   <h5>$ 209.990</h5>
                   <p id="price_product5"></p>
                   <br />
-                  <p class="card-text"  >
-                    <p>
+                  <p class="card-text">
                     Intel Celeron N3350 <br />Memoria RAM: 4 GB<br />Disco Duro:
                     64 GB <br />Sistema operativo: Chrome OS <br />Pantalla: '14
                     (1366x768)
-                  </p>
                   </p>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted"
                     >&#9733; &#9733; &#9733; &#9733; &#9734;</small
                   >
-                  <button type="button" class="btn btn-primary" id="btnBuscar5"  style="FONT-SIZE: 8pt; FONT-FAMILY: Verdana;float: right;"> Comparar Precios </button>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="btnBuscar5"
+                    style="font-size: 8pt; font-family: Verdana; float: right"
+                  >
+                    Comparar Precios
+                  </button>
                 </div>
-                
               </div>
-              </div>
-              
-              <script>
-                document.querySelector("#btnBuscar5").addEventListener('click', function () {
-                  var txtProducto = document.getElementById("nombre_producto5").innerHTML;
+            </div>
+
+            <script>
+              document
+                .querySelector("#btnBuscar5")
+                .addEventListener("click", function () {
+                  var txtProducto =
+                    document.getElementById("nombre_producto5").innerHTML;
                   console.log(txtProducto);
                   obtener_registro5(txtProducto);
                 });
-                function obtener_registro5(str) {
-              
-                  let url = 'https://publicapi.solotodo.com/products/browse/?search=' + str;
-              
-                  const api = new XMLHttpRequest();
-              
-                  api.onreadystatechange = function () {
-                    if (this.readyState == 4 && this.status == 200) {
-                      let datos = JSON.parse(this.responseText);
-                     
-                      // ID Producto
-                      var id = datos.results[0].product.id;
-                      console.log(datos.results[0].product.id);
-                      let url1 = "https://publicapi.solotodo.com/products/available_entities/?ids=" + id + "&stores=1085&stores=30&stores=3&stores=279&stores=1119&stores=128&stores=920&stores=138&stores=1712&stores=4&stores=722&stores=788&stores=285&stores=201&stores=398&stores=397&stores=755&stores=31&stores=61&stores=193&stores=7&stores=1052&stores=255&stores=656&stores=16&stores=426&stores=261&stores=88&stores=1481&stores=1580&stores=291&stores=283&stores=1382&stores=172&stores=38&stores=723&stores=559&stores=9&stores=326&stores=822&stores=1349&stores=289&stores=689&stores=1679&stores=427&stores=1217&stores=21&stores=1448&stores=286&stores=1811&stores=284&stores=232&stores=87&stores=27&stores=281&stores=263&stores=56&stores=1283&stores=256&stores=954&stores=197&stores=292&stores=5&stores=524&stores=199&stores=43&stores=76&stores=228&stores=294&stores=174&stores=23&stores=290&stores=392&stores=887&stores=260&stores=195&stores=225&stores=262&stores=115&stores=1646&stores=265&stores=287&stores=37&stores=118&stores=39&stores=921&stores=116&stores=1250&stores=257&stores=266&stores=986&stores=1713&stores=11&stores=278&stores=34&stores=12&stores=854&stores=198&stores=1547&stores=1251&stores=1118&stores=267&stores=953&stores=28&stores=186&stores=68&stores=106&stores=18&stores=223&stores=194&stores=1316&stores=1019&stores=282&stores=956&stores=293&stores=1779&stores=623&stores=67&stores=1415&stores=47&stores=425&stores=86&stores=183&stores=22&stores=1514&stores=955&stores=1086&stores=1745&stores=227&stores=176&stores=181&stores=167&stores=173&stores=264&stores=1449&stores=35&stores=170&stores=6&stores=280&stores=789&stores=359&stores=558&stores=114&stores=44&stores=1647&stores=821&stores=63&stores=1778&stores=495&stores=14&stores=239&stores=45&stores=1613&stores=85&stores=1151&stores=91&exclude_refurbished=undefined"
-                      console.log(url1)
-                      api.open("GET", url1, true)
-                      api.send();
-                      api.onreadystatechange = function () {
-                        if (this.readyState == 4 && this.status == 200) {
-                          let datos1 = JSON.parse(this.responseText);
-                          // Precio Producto
-                          var price = 'Solotodo: $' + datos1.results[0].entities[0].active_registry.offer_price.split('.')[0];
-                          console.log(price);
-                          document.getElementById("price_product5").innerHTML = price;
-              
-                        }
+              function obtener_registro5(str) {
+                let url =
+                  "https://publicapi.solotodo.com/products/browse/?search=" +
+                  str;
+
+                const api = new XMLHttpRequest();
+
+                api.onreadystatechange = function () {
+                  if (this.readyState == 4 && this.status == 200) {
+                    let datos = JSON.parse(this.responseText);
+
+                    // ID Producto
+                    var id = datos.results[0].product.id;
+                    console.log(datos.results[0].product.id);
+                    let url1 =
+                      "https://publicapi.solotodo.com/products/available_entities/?ids=" +
+                      id +
+                      "&stores=1085&stores=30&stores=3&stores=279&stores=1119&stores=128&stores=920&stores=138&stores=1712&stores=4&stores=722&stores=788&stores=285&stores=201&stores=398&stores=397&stores=755&stores=31&stores=61&stores=193&stores=7&stores=1052&stores=255&stores=656&stores=16&stores=426&stores=261&stores=88&stores=1481&stores=1580&stores=291&stores=283&stores=1382&stores=172&stores=38&stores=723&stores=559&stores=9&stores=326&stores=822&stores=1349&stores=289&stores=689&stores=1679&stores=427&stores=1217&stores=21&stores=1448&stores=286&stores=1811&stores=284&stores=232&stores=87&stores=27&stores=281&stores=263&stores=56&stores=1283&stores=256&stores=954&stores=197&stores=292&stores=5&stores=524&stores=199&stores=43&stores=76&stores=228&stores=294&stores=174&stores=23&stores=290&stores=392&stores=887&stores=260&stores=195&stores=225&stores=262&stores=115&stores=1646&stores=265&stores=287&stores=37&stores=118&stores=39&stores=921&stores=116&stores=1250&stores=257&stores=266&stores=986&stores=1713&stores=11&stores=278&stores=34&stores=12&stores=854&stores=198&stores=1547&stores=1251&stores=1118&stores=267&stores=953&stores=28&stores=186&stores=68&stores=106&stores=18&stores=223&stores=194&stores=1316&stores=1019&stores=282&stores=956&stores=293&stores=1779&stores=623&stores=67&stores=1415&stores=47&stores=425&stores=86&stores=183&stores=22&stores=1514&stores=955&stores=1086&stores=1745&stores=227&stores=176&stores=181&stores=167&stores=173&stores=264&stores=1449&stores=35&stores=170&stores=6&stores=280&stores=789&stores=359&stores=558&stores=114&stores=44&stores=1647&stores=821&stores=63&stores=1778&stores=495&stores=14&stores=239&stores=45&stores=1613&stores=85&stores=1151&stores=91&exclude_refurbished=undefined";
+                    console.log(url1);
+                    api.open("GET", url1, true);
+                    api.send();
+                    api.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        let datos1 = JSON.parse(this.responseText);
+                        // Precio Producto
+                        var price =
+                          "Solotodo: $" +
+                          datos1.results[0].entities[0].active_registry.offer_price.split(
+                            "."
+                          )[0];
+                        console.log(price);
+                        document.getElementById("price_product5").innerHTML =
+                          price;
                       }
-                    }
-                  };
-                  api.open("GET", url, true);
-                  api.send();
-                }
-              </script>
+                    };
+                  }
+                };
+                api.open("GET", url, true);
+                api.send();
+              }
+            </script>
 
-
-
- <!---------------------Producto 6------------------>
+            <!---------------------Producto 6------------------>
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
                 <a href="products/view/Notebook001.html"
@@ -579,7 +659,9 @@
                 /></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a id="nombre_producto6" href="products/view/Notebook001.html"
+                    <a
+                      id="nombre_producto6"
+                      href="products/view/Notebook001.html"
                       >HP Omen 15-EN0002LA</a
                     >
                   </h4>
@@ -595,70 +677,83 @@
                     necesitas.
                   </p>
                 </div>
-                
+
                 <div class="card-footer">
                   <small class="text-muted"
                     >&#9733; &#9733; &#9733; &#9733; &#9734;</small
                   >
-                  <button type="button" class="btn btn-primary" id="btnBuscar6"  style="FONT-SIZE: 8pt; FONT-FAMILY: Verdana;float: right;"> Comparar Precios </button>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="btnBuscar6"
+                    style="font-size: 8pt; font-family: Verdana; float: right"
+                  >
+                    Comparar Precios
+                  </button>
                 </div>
-
               </div>
             </div>
-              
-              <script>
-                document.querySelector("#btnBuscar6").addEventListener('click', function () {
-                  var txtProducto = document.getElementById("nombre_producto6").innerHTML;
+
+            <script>
+              document
+                .querySelector("#btnBuscar6")
+                .addEventListener("click", function () {
+                  var txtProducto =
+                    document.getElementById("nombre_producto6").innerHTML;
                   console.log(txtProducto);
                   obtener_registro6(txtProducto);
                 });
-                function obtener_registro6(str) {
-              
-                  let url = 'https://publicapi.solotodo.com/products/browse/?search=' + str;
-              
-                  const api = new XMLHttpRequest();
-              
-                  api.onreadystatechange = function () {
-                    if (this.readyState == 4 && this.status == 200) {
-                      let datos = JSON.parse(this.responseText);
-                     
-                     // ID Producto
-                      var id = datos.results[0].product.id;
-                      console.log(datos.results[0].product.id);
-                      let url1 = "https://publicapi.solotodo.com/products/available_entities/?ids=" + id + "&stores=1085&stores=30&stores=3&stores=279&stores=1119&stores=128&stores=920&stores=138&stores=1712&stores=4&stores=722&stores=788&stores=285&stores=201&stores=398&stores=397&stores=755&stores=31&stores=61&stores=193&stores=7&stores=1052&stores=255&stores=656&stores=16&stores=426&stores=261&stores=88&stores=1481&stores=1580&stores=291&stores=283&stores=1382&stores=172&stores=38&stores=723&stores=559&stores=9&stores=326&stores=822&stores=1349&stores=289&stores=689&stores=1679&stores=427&stores=1217&stores=21&stores=1448&stores=286&stores=1811&stores=284&stores=232&stores=87&stores=27&stores=281&stores=263&stores=56&stores=1283&stores=256&stores=954&stores=197&stores=292&stores=5&stores=524&stores=199&stores=43&stores=76&stores=228&stores=294&stores=174&stores=23&stores=290&stores=392&stores=887&stores=260&stores=195&stores=225&stores=262&stores=115&stores=1646&stores=265&stores=287&stores=37&stores=118&stores=39&stores=921&stores=116&stores=1250&stores=257&stores=266&stores=986&stores=1713&stores=11&stores=278&stores=34&stores=12&stores=854&stores=198&stores=1547&stores=1251&stores=1118&stores=267&stores=953&stores=28&stores=186&stores=68&stores=106&stores=18&stores=223&stores=194&stores=1316&stores=1019&stores=282&stores=956&stores=293&stores=1779&stores=623&stores=67&stores=1415&stores=47&stores=425&stores=86&stores=183&stores=22&stores=1514&stores=955&stores=1086&stores=1745&stores=227&stores=176&stores=181&stores=167&stores=173&stores=264&stores=1449&stores=35&stores=170&stores=6&stores=280&stores=789&stores=359&stores=558&stores=114&stores=44&stores=1647&stores=821&stores=63&stores=1778&stores=495&stores=14&stores=239&stores=45&stores=1613&stores=85&stores=1151&stores=91&exclude_refurbished=undefined"
-                      console.log(url1)
-                      api.open("GET", url1, true)
-                      api.send();
-                      api.onreadystatechange = function () {
-                        if (this.readyState == 4 && this.status == 200) {
-                          let datos1 = JSON.parse(this.responseText);
-                          // Precio Producto
-                          var price = 'Solotodo: $' + datos1.results[0].entities[0].active_registry.offer_price.split('.')[0];
-                          console.log(price);
-                          document.getElementById("price_product6").innerHTML = price;
-              
-                        }
+              function obtener_registro6(str) {
+                let url =
+                  "https://publicapi.solotodo.com/products/browse/?search=" +
+                  str;
+
+                const api = new XMLHttpRequest();
+
+                api.onreadystatechange = function () {
+                  if (this.readyState == 4 && this.status == 200) {
+                    let datos = JSON.parse(this.responseText);
+
+                    // ID Producto
+                    var id = datos.results[0].product.id;
+                    console.log(datos.results[0].product.id);
+                    let url1 =
+                      "https://publicapi.solotodo.com/products/available_entities/?ids=" +
+                      id +
+                      "&stores=1085&stores=30&stores=3&stores=279&stores=1119&stores=128&stores=920&stores=138&stores=1712&stores=4&stores=722&stores=788&stores=285&stores=201&stores=398&stores=397&stores=755&stores=31&stores=61&stores=193&stores=7&stores=1052&stores=255&stores=656&stores=16&stores=426&stores=261&stores=88&stores=1481&stores=1580&stores=291&stores=283&stores=1382&stores=172&stores=38&stores=723&stores=559&stores=9&stores=326&stores=822&stores=1349&stores=289&stores=689&stores=1679&stores=427&stores=1217&stores=21&stores=1448&stores=286&stores=1811&stores=284&stores=232&stores=87&stores=27&stores=281&stores=263&stores=56&stores=1283&stores=256&stores=954&stores=197&stores=292&stores=5&stores=524&stores=199&stores=43&stores=76&stores=228&stores=294&stores=174&stores=23&stores=290&stores=392&stores=887&stores=260&stores=195&stores=225&stores=262&stores=115&stores=1646&stores=265&stores=287&stores=37&stores=118&stores=39&stores=921&stores=116&stores=1250&stores=257&stores=266&stores=986&stores=1713&stores=11&stores=278&stores=34&stores=12&stores=854&stores=198&stores=1547&stores=1251&stores=1118&stores=267&stores=953&stores=28&stores=186&stores=68&stores=106&stores=18&stores=223&stores=194&stores=1316&stores=1019&stores=282&stores=956&stores=293&stores=1779&stores=623&stores=67&stores=1415&stores=47&stores=425&stores=86&stores=183&stores=22&stores=1514&stores=955&stores=1086&stores=1745&stores=227&stores=176&stores=181&stores=167&stores=173&stores=264&stores=1449&stores=35&stores=170&stores=6&stores=280&stores=789&stores=359&stores=558&stores=114&stores=44&stores=1647&stores=821&stores=63&stores=1778&stores=495&stores=14&stores=239&stores=45&stores=1613&stores=85&stores=1151&stores=91&exclude_refurbished=undefined";
+                    console.log(url1);
+                    api.open("GET", url1, true);
+                    api.send();
+                    api.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        let datos1 = JSON.parse(this.responseText);
+                        // Precio Producto
+                        var price =
+                          "Solotodo: $" +
+                          datos1.results[0].entities[0].active_registry.offer_price.split(
+                            "."
+                          )[0];
+                        console.log(price);
+                        document.getElementById("price_product6").innerHTML =
+                          price;
                       }
-                    }
-                  };
-                  api.open("GET", url, true);
-                  api.send();
-                }
-              </script>
-                
-
-
+                    };
+                  }
+                };
+                api.open("GET", url, true);
+                api.send();
+              }
+            </script>
           </div>
           <!-- /.row -->
         </div>
-        <!-- /.col-lg-9 -->
+        <!-- /.col-lg-10 -->
       </div>
       <!-- /.row -->
     </div>
     <div class="separadorfooter">
       <div class="row"></div>
     </div>
-    
 
     <!-- Footer -->
     <footer class="page-footer font-small bg-dark pt-4">
@@ -682,60 +777,61 @@
           <!-- Grid column -->
           <div class="col-md-4">
             <div class="text-center">
-            <!-- Links -->
-            <h5 class="text-uppercase texto-footer">Servicios</h5>
+              <!-- Links -->
+              <h5 class="text-uppercase texto-footer">Servicios</h5>
 
-            <ul class="list-unstyled">
-              <li>
-                <a href="menu/TerminoCondiciones.html">
-                  <img src="img/Pag/Cosas/tyc.png" />Términos y condiciones</a
-                >
-              </li>
-              <li>
-                <a href="menu/PoliticaPrivacidad.html">
-                  <img src="img/Pag/Cosas/pdp.png" />Políticas de Privacidad</a>
-              </li>
-            </ul>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="menu/TerminoCondiciones.html">
+                    <img src="img/Pag/Cosas/tyc.png" />Términos y condiciones</a
+                  >
+                </li>
+                <li>
+                  <a href="menu/PoliticaPrivacidad.html">
+                    <img src="img/Pag/Cosas/pdp.png" />Políticas de
+                    Privacidad</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-
 
           <!-- Grid column -->
           <hr class="clearfix w-100 d-md-none pb-3" />
           <!-- Grid column -->
           <div class="col-md-3">
             <div class="text-right">
-            <!-- Links -->
-            <h5 class="text-uppercase texto-footer">Redes Sociales</h5>
+              <!-- Links -->
+              <h5 class="text-uppercase texto-footer">Redes Sociales</h5>
 
-            <ul class="list-unstyled">
-              <li>
-                <a href="https://www.facebook.com/">
-                  <img src="img/Social/facebook.png" />
-                  Facebook</a
-                >
-              </li>
-              <li>
-                <a href="https://twitter.com/">
-                  <img src="img/Social/twitter.png" />
-                  Twitter</a
-                >
-              </li>
-              <li>
-                <a href="https://www.instagram.com/">
-                  <img src="img/Social/instagram.png" />
-                  Instagram</a
-                >
-              </li>
-              <li>
-                <a href="https://www.youtube.com/">
-                  <img src="img/Social/youtube.png" />
-                  Youtube</a
-                >
-              </li>
-            </ul>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="https://www.facebook.com/">
+                    <img src="img/Social/facebook.png" />
+                    Facebook</a
+                  >
+                </li>
+                <li>
+                  <a href="https://twitter.com/">
+                    <img src="img/Social/twitter.png" />
+                    Twitter</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/">
+                    <img src="img/Social/instagram.png" />
+                    Instagram</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/">
+                    <img src="img/Social/youtube.png" />
+                    Youtube</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
           <!-- Grid column -->
         </div>
         <!-- Grid row -->
