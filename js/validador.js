@@ -30,7 +30,7 @@ $("#formulario1").validate({
     },
     txtnombreusuario: {
       required: "Debe tener un nombre de usuario",
-      minlength: "Debe tener minimo 4 carcteres",
+      minlength: "Debe tener mínimo 4 carcteres",
     },
     txtEmail: {
       required: "Ingrese email",
